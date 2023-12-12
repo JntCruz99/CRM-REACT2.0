@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Main from '../components/Main';
+import ChatComponent from '../components/ChatComponent';
 
 const Cliente = () => {
     const { id } = useParams();
@@ -413,6 +414,7 @@ const Cliente = () => {
                     </div>
                 </div>
             </div>
+            <ChatComponent clienteId={id} />
         </Main>
     );
 };
